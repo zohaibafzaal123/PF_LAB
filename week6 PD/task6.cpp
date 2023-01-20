@@ -21,48 +21,60 @@ main()
 
 float priceStudio(string month, int day)
 {
+    float finalprice;
     float price;
-    if ((month == "may" || month == "october") && day > 14)
-    {
-        price = (0.70 * 50) * day;
-    }
+    
     if ((month == "may" || month == "october") && (day < 14 && day > 7))
     {
-        price = (0.95 * 50) * day;
+        price = 50.0 * day;
+        finalprice = price - (0.05 * price);
+    }
+    if ((month == "may" || month == "october") && day > 14)
+    {
+        price = 50 * day;
+        finalprice = price - (0.30 * price);
     }
     if ((month == "june" || month == "september") && day > 14)
     {
-        price = (0.70 * 75.20) * day;
+        price =  75.20 * day;
+        finalprice = price - (0.20 * price);
     }
     if ((month == "june" || month == "september") && (day < 14 && day > 7))
     {
-        price = (0.95 * 75.20) * day;
+        price = 75.20 * day;
+        finalprice = price ;
     }
     if ((month == "july" || month == "august") && day > 14)
     {
-        price = (0.70 * 76) * day;
+        price =  76 * day;
+        finalprice = price ;
     }
     if ((month == "july" || month == "august") && (day < 14 && day > 7))
     {
-        price = (0.95 * 76) * day;
+        price = 76 * day;
+        finalprice = price ;
     }
-    return price;
+    return finalprice;
 }
 
 float priceAppartment(string month, int day)
 {
+    float finalprice;
     float price;
     if ((month == "may" || month == "october") && day > 14)
     {
-        price = (65 * 0.90) * day;
+        price = 65  * day;
+        finalprice = price - (0.10 * price);
     }
     if ((month == "june" || month == "september") && day > 14)
     {
-        price = (0.90 * 68.70) * day;
+        price = 68.70 * day;
+        finalprice = price - (0.10 * price);
     }
     if ((month == "july" || month == "august") && day > 14)
     {
-        price = (0.90 * 77) * day;
+        price = 77 * day;
+        finalprice = price - (0.10 * price);
     }
-    return price;
+    return finalprice;
 }

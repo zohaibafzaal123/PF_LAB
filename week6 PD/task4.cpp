@@ -23,7 +23,7 @@ main()
     }
     if (service == 'p')
     {
-        cout << "Enter the 'd' for day time and enter tht 'n' for night time: ";
+        cout << "Enter 'd' for day time and enter 'n' for night time: ";
         cin >> days;
     }
 
@@ -44,5 +44,5 @@ main()
         price = 25;
     }
 
-    cout << price << " $ ";
+    cout << price << " $ is your total bill. ";
 }
